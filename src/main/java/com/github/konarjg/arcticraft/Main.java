@@ -4,13 +4,18 @@ import org.slf4j.Logger;
 
 import com.github.konarjg.arcticraft.registry.Blocks;
 import com.github.konarjg.arcticraft.registry.Items;
+import com.mojang.datafixers.types.templates.Tag;
 import com.mojang.logging.LogUtils;
 
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,9 +28,10 @@ import net.minecraftforge.registries.RegistryObject;
 public class Main
 {
     public static final String MODID = "arc";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
     
 	public static CreativeModeTab TAB;
+	public static final TagKey<Block> DRILL = BlockTags.create(new ResourceLocation(MODID + ":mineable/drill"));
     
     public Main()
     {
@@ -44,11 +50,7 @@ public class Main
 	private void registerCreativeTab(final CreativeModeTabEvent.Register event)
 	{
 		TAB = event.registerCreativeModeTab(new ResourceLocation(Main.MODID, "arcticraft"), configurator -> 
-			configurator.icon(() -> new ItemStack(Blocks.HARD_SNOW.get())).title(Component.translatable("item_group." + Main.MODID + ".arcticraft")).displayItems((params, output) -> 
-			{
-				for (RegistryObject<Item> item : Items.ITEMS.getEntries())
-	    			output.accept(item.get());
-			})
+			configurator.icon(() -> new ItemStack(Blocks.HARD_SNOW.get())).title(Component.translatable("item_group." + Main.MODID + ".arcticraft"))
 		);
 	}
     
@@ -56,7 +58,8 @@ public class Main
     {
     	if(event.getTab() == TAB)
     	{
-    		
+    		for (RegistryObject<Item> item : Items.ITEMS.getEntries())
+    			event.accept(item.get());
     	}
     }
 
