@@ -1,5 +1,15 @@
 {
 	"item_group.arc.arcticraft":"Arcticraft",
+
 	"block.arc.hard_snow":"Hard Snow",
-	"block.arc.hard_ice":"Hard Ice"
+	"block.arc.hard_ice":"Hard Ice",
+
+	"item.arc.ice_shard":"Ice Shard",
+	"item.arc.crystal_shard":"Crystal Shard",
+
+	"item.arc.stone_drill":"Stone Drill",
+	"item.arc.iron_drill":"Iron Drill",
+	"item.arc.golden_drill":"Golden Drill",
+	"item.arc.diamond_drill":"Diamond Drill",
+	"item.arc.netherite_drill":"Netherite Drill"
 }
