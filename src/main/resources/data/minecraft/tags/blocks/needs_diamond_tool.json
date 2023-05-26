@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "arc:crystal_ore",
+        "arc:crystal_block"
+    ]
+}

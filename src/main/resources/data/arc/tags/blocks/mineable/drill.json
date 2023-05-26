@@ -2,6 +2,8 @@
     "replace": false,
     "values": [
         "arc:hard_snow",
-	  "arc:hard_ice"
+	  "arc:hard_ice",
+	  "arc:crystal_ore",
+	  "arc:crystal_block"
     ]
 }

@@ -47,7 +47,7 @@ public class Main
 	private void registerCreativeTab(final CreativeModeTabEvent.Register event)
 	{
 		TAB = event.registerCreativeModeTab(new ResourceLocation(Main.MODID, "arcticraft"), configurator -> 
-			configurator.icon(() -> new ItemStack(Blocks.HARD_SNOW.get())).title(Component.translatable("item_group." + Main.MODID + ".arcticraft"))
+			configurator.icon(() -> new ItemStack(Items.CRYSTAL.get())).title(Component.translatable("item_group." + Main.MODID + ".arcticraft"))
 		);
 	}
     

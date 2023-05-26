@@ -3,9 +3,12 @@
 
 	"block.arc.hard_snow":"Hard Snow",
 	"block.arc.hard_ice":"Hard Ice",
+	"block.arc.crystal_ore":"Crystal Ore",
+	"block.arc.crystal_block":"Crystal Block",
 
 	"item.arc.ice_shard":"Ice Shard",
 	"item.arc.crystal_shard":"Crystal Shard",
+	"item.arc.crystal":"Crystal",
 
 	"item.arc.stone_drill":"Stone Drill",
 	"item.arc.iron_drill":"Iron Drill",
