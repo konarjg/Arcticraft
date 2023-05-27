@@ -7,7 +7,7 @@
     ],
     "key": {
         "#": {
-            "item": "minecraft:cobblestone"
+            "item": "minecraft:iron_block"
         },
         "|": {
             "tag": "minecraft:planks"
@@ -17,6 +17,6 @@
         }
     },
     "result": {
-        "item": "arc:stone_drill"
+        "item": "arc:iron_drill"
     }
 } 
