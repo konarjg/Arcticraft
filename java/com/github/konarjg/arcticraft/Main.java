@@ -2,6 +2,7 @@ package com.github.konarjg.arcticraft;
 
 import org.slf4j.Logger;
 
+import com.github.konarjg.arcticraft.registry.BlockEntities;
 import com.github.konarjg.arcticraft.registry.Blocks;
 import com.github.konarjg.arcticraft.registry.Items;
 import com.mojang.logging.LogUtils;
@@ -35,6 +36,7 @@ public class Main
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         Blocks.BLOCKS.register(modEventBus);
+        BlockEntities.BLOCK_ENTITIES.register(modEventBus);
         Items.ITEMS.register(modEventBus);
         
         modEventBus.addListener(this::setup);
